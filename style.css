@@ -63,6 +63,15 @@ button:hover {
   left: 0;
 }
 
+body > nav {
+  background-color: #fff;
+  padding: 20px 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 0 20px;
   color: black;
@@ -86,13 +95,13 @@ button:hover {
 
 #bar:hover,
 #bar:active {
-  color: coral;
+  color: rgb(251, 251, 251);
 }
 
 @media only screen and (max-width: 991px) {
   body > nav > div > button:hover,
   body > nav > div > button:focus {
-    background-color: transparent;
+    background-color: coral;
   }
 
   #navbarSupportedContent > ul {
