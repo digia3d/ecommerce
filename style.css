@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -16,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -55,6 +56,21 @@ button {
 
 button:hover {
   background-color: #3a3833;
+}
+
+hr {
+  width: 30px;
+  background-color: coral;
+  height: 2px;
+}
+
+.star {
+  padding: 10px 0;
+}
+
+.star i {
+  font-size: 0.8rem;
+  color: gold;
 }
 
 .navbar {
@@ -216,4 +232,32 @@ body > nav {
   justify-content: center;
   align-items: flex-end;
   text-align: end;
+}
+
+/* Products */
+
+.product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.product img {
+  transition: 0.3s all;
+}
+
+.product:hover img {
+  opacity: 0.7;
+}
+
+.product .buy-btn {
+  background-color: coral;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s all;
+  border: none;
+}
+
+.product:hover .buy-btn {
+  transform: translateY(0);
+  opacity: 1;
 }
