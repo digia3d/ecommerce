@@ -13,6 +13,20 @@
 
    <link rel="stylesheet" href="style.css" />
 
+   <style>
+      .small-img-group {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .small-img-col {
+         flex-basis: 24%;
+         cursor: pointer;
+      }
+
+
+   </style>
+
 </head>
 
 <body>
@@ -58,7 +72,21 @@
    <section class="container sproduct my-5 pt-5">
       <div class="row mt-5">
          <div class="col-lg-5 col-md-12 col-12">
-            <img class="img-fluid w-100" src="img/shop/1.jpg" alt="">
+            <img class="img-fluid w-100 pb-1" src="img/shop/1.jpg" alt="">
+            <div class="small-img-group">
+               <div class="small-img-col">
+                  <img src="img/shop/1.jpg" width="100%" class="small-img" alt="">
+               </div>
+               <div class="small-img-col">
+                  <img src="img/shop/24.jpg" width="100%" class="small-img" alt="">
+               </div>
+               <div class="small-img-col">
+                  <img src="img/shop/25.jpg" width="100%" class="small-img" alt="">
+               </div>
+               <div class="small-img-col">
+                  <img src="img/shop/26.jpg" width="100%" class="small-img" alt="">
+               </div>
+            </div>
          </div>
          <div></div>
       </div>
