@@ -89,7 +89,7 @@ body > nav {
   z-index: 999;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
   padding: 0 20px;
   color: black;
   transition: 0.3s ease;
@@ -123,26 +123,20 @@ body > nav {
 
   #navbarSupportedContent > ul {
     background-color: #fff;
-    position: absolute;
-    left: 0;
-    width: 100%;
+    margin: 1rem;
     justify-content: flex-end;
     align-items: flex-end;
     text-align: right;
   }
 
-  #navbarSupportedContent > ul > li:nth-child(n) {
-    padding: 10px 10px;
-  }
-
-  #navbarSupportedContent > ul > li:nth-child(6) {
-    padding: 20px;
+  #navbarSupportedContent > ul > li:nth-child(n) > a {
+    padding: 10px 0;
   }
 }
 
 /* mobile NAV */
 
-.navbar-expand-lg .navbar-toggler {
+.navbar-light .navbar-toggler {
   border: none;
   outline: none;
 }
