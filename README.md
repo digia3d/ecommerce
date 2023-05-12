@@ -2,16 +2,6 @@
 
 - This project is an Ecommerce website built using HTML and CSS. It is a multipage website that provides a platform for online shopping and allows customers to browse and purchase products conveniently. This README file provides an overview of the project and instructions for running and customizing the website.
 
-Table of Contents
-Features
-Installation
-Usage
-Folder Structure
-Customization
-Contributing
-License
-Features
-
 ## Responsive Design:
 > The website is designed to be responsive, ensuring optimal viewing experience across various devices and screen sizes.
 
