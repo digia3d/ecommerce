@@ -141,9 +141,15 @@ body > nav {
   outline: none;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:hover,
-.navbar-expand-lg .navbar-nav .nav-link:active {
-  color: coral !important;
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: coral;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: coral;
 }
 
 .navbar i:hover,
