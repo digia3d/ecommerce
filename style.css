@@ -46,7 +46,7 @@ button {
   font-weight: 700;
   outline: none;
   border: none;
-  background-color: #1d1d1d;
+  background-color: darkviolet;
   color: aliceblue;
   padding: 13px 30px;
   cursor: pointer;
@@ -60,7 +60,7 @@ button:hover {
 
 hr {
   width: 30px;
-  background-color: coral;
+  background-color: darkviolet;
   height: 2px;
 }
 
@@ -102,6 +102,10 @@ body > nav {
   transition: 0.3s ease;
 }
 
+.logo {
+  width: 20%;
+}
+
 #bar {
   font-size: 1.5rem;
   color: black;
@@ -118,7 +122,7 @@ body > nav {
 @media only screen and (max-width: 991px) {
   body > nav > div > button:hover,
   body > nav > div > button:focus {
-    background-color: coral;
+    background-color: darkviolet;
   }
 
   #navbarSupportedContent > ul {
@@ -141,22 +145,28 @@ body > nav {
   outline: none;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:hover,
-.navbar-expand-lg .navbar-nav .nav-link:active {
-  color: coral !important;
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: darkviolet;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: darkviolet;
 }
 
 .navbar i:hover,
 .navbar i:active {
-  color: coral;
+  color: darkviolet;
 }
 
 #home {
-  background-image: url("img/back.jpg");
+  background-image: url("img/back.png");
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: top 90px center;
+  background-position: top 60px center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -165,7 +175,7 @@ body > nav {
 }
 
 #home span {
-  color: coral;
+  color: darkviolet;
 }
 
 #new .one img {
@@ -248,7 +258,7 @@ body > nav {
 }
 
 .product .buy-btn {
-  background-color: coral;
+  background-color: darkviolet;
   transform: translateY(20px);
   opacity: 0;
   transition: 0.3s all;
@@ -261,9 +271,9 @@ body > nav {
 }
 
 #banner {
-  background-image: url("img/banner/2.jpg");
+  background-image: url("img/banner/3.png");
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: top 70px center;
   background-repeat: no-repeat;
@@ -283,7 +293,7 @@ body > nav {
 }
 
 #banner button {
-  background-color: coral;
+  background-color: darkviolet;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -291,8 +301,13 @@ body > nav {
   transition: 0.3s ease;
 }
 
+#banner button:hover {
+  background-color: rgb(196, 94, 239);
+  color: rgb(11, 10, 11);
+}
+
 footer {
-  background-color: #222;
+  background-color: #000;
 }
 
 footer h5 {
@@ -330,5 +345,9 @@ body > footer > div.copyright.mt-5 > div > div:nth-child(n) > a:nth-child(n) > i
 
 body > footer > div > div > div:nth-child(n) > a:nth-child(n):hover > i:hover {
   color: #fff;
-  background-color: coral;
+  background-color: darkviolet;
+}
+
+.footer-logo {
+  width: 100%;
 }
