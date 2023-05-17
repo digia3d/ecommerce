@@ -395,3 +395,9 @@ body > footer > div > div > div:nth-child(n) > a:nth-child(n):hover > i:hover {
 #blog-container .post:hover h3 {
   color: darkviolet;
 }
+
+/* Cart */
+
+#cart-container table {
+  
+}
