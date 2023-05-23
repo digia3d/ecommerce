@@ -1,9 +1,4 @@
-const carts = document.querySelectorAll('.add-cart');
-for (let i = 0; i < carts.length; i++) {
-  carts[i].addEventListener('click', () => {
-    cartNumbers();
-  });
-}
+/* eslint-disable no-plusplus */
 
 function onLoadCartNumbers() {
   const productNumbers = localStorage.getItem('cartNumbers');
@@ -14,14 +9,22 @@ function onLoadCartNumbers() {
 
 function cartNumbers() {
   let productNumbers = localStorage.getItem('cartNumbers');
-  productNumbers = parseInt(productNumbers);
+  productNumbers = parseInt(productNumbers, 10);
+
   if (productNumbers) {
-    localStorage.setItem('cartNumbers', productNumbers + 1);
+    localStorage.setItem('cartNumbers', (productNumbers += 1));
     document.querySelector('.cart span').textContent = productNumbers + 1;
   } else {
     localStorage.setItem('cartNumbers', 1);
     document.querySelector('.cart span').textContent = 1;
   }
+}
+
+const carts = document.querySelectorAll('.add-cart');
+for (let i = 0; i < carts.length; i++) {
+  carts[i].addEventListener('click', () => {
+    cartNumbers();
+  });
 }
 
 onLoadCartNumbers();
