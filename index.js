@@ -38,43 +38,38 @@ for (let i = 0; i < removeCartItemButtons.length; i++) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM content loaded");
-
-  document.getElementById("previous-link").addEventListener("click", function(event) {
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('previous-link').addEventListener('click', (event) => {
     event.preventDefault(); // Prevent the default link behavior
 
     // Get the active page
-    let activePage = document.querySelector(".page-item.active");
+    const activePage = document.querySelector('.page-item.active');
 
     // Handle going to the previous page
-    let previousPage = activePage.previousElementSibling;
-    if (previousPage && !previousPage.classList.contains("disabled")) {
+    const previousPage = activePage.previousElementSibling;
+    if (previousPage && !previousPage.classList.contains('disabled')) {
       // Remove the active class from the current page
-      activePage.classList.remove("active");
+      activePage.classList.remove('active');
 
       // Add the active class to the previous page
-      previousPage.classList.add("active");
+      previousPage.classList.add('active');
     }
   });
 
-  document.getElementById("next-link").addEventListener("click", function(event) {
+  document.getElementById('next-link').addEventListener('click', (event) => {
     event.preventDefault(); // Prevent the default link behavior
 
     // Get the active page
-    let activePage = document.querySelector(".page-item.active");
+    const activePage = document.querySelector('.page-item.active');
 
     // Handle going to the next page
-    let nextPage = activePage.nextElementSibling;
-    if (nextPage && !nextPage.classList.contains("disabled")) {
+    const nextPage = activePage.nextElementSibling;
+    if (nextPage && !nextPage.classList.contains('disabled')) {
       // Remove the active class from the current page
-      activePage.classList.remove("active");
+      activePage.classList.remove('active');
 
       // Add the active class to the next page
-      nextPage.classList.add("active");
+      nextPage.classList.add('active');
     }
   });
 });
-
-
-
