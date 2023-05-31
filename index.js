@@ -38,36 +38,43 @@ for (let i = 0; i < removeCartItemButtons.length; i++) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-document.getElementById("previous-link").addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent the default link behavior
-  console.log("Previous button clicked");
-  // Get the active page
-  let activePage = document.querySelector(".page-item.active");
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM content loaded");
 
-  // Handle going to the previous page
-  let previousPage = activePage.previousElementSibling;
-  if (previousPage && !previousPage.classList.contains("disabled")) {
-    // Go to the previous page by updating the active class
-    activePage.classList.remove("active");
-    previousPage.classList.add("active");
-  }
+  document.getElementById("previous-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Get the active page
+    let activePage = document.querySelector(".page-item.active");
+
+    // Handle going to the previous page
+    let previousPage = activePage.previousElementSibling;
+    if (previousPage && !previousPage.classList.contains("disabled")) {
+      // Remove the active class from the current page
+      activePage.classList.remove("active");
+
+      // Add the active class to the previous page
+      previousPage.classList.add("active");
+    }
+  });
+
+  document.getElementById("next-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Get the active page
+    let activePage = document.querySelector(".page-item.active");
+
+    // Handle going to the next page
+    let nextPage = activePage.nextElementSibling;
+    if (nextPage && !nextPage.classList.contains("disabled")) {
+      // Remove the active class from the current page
+      activePage.classList.remove("active");
+
+      // Add the active class to the next page
+      nextPage.classList.add("active");
+    }
+  });
 });
 
-document.getElementById("next-link").addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent the default link behavior
-
-  // Get the active page
-  let activePage = document.querySelector(".page-item.active");
-
-  // Handle going to the next page
-  let nextPage = activePage.nextElementSibling;
-  if (nextPage && !nextPage.classList.contains("disabled")) {
-    // Go to the next page by updating the active class
-    activePage.classList.remove("active");
-    nextPage.classList.add("active");
-  }
-});
-});
 
 
