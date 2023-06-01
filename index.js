@@ -1,5 +1,7 @@
 /* eslint-disable no-plusplus */
 
+import products from './products.js';
+
 function onLoadCartNumbers() {
   const productNumbers = localStorage.getItem('cartNumbers');
   if (productNumbers) {
@@ -7,7 +9,8 @@ function onLoadCartNumbers() {
   }
 }
 
-function cartNumbers(quantity) {
+function cartNumbers(quantity, product) {
+  console.log('The product clicked is', product);
   let productNumbers = localStorage.getItem('cartNumbers');
   productNumbers = parseInt(productNumbers, 10);
 
@@ -25,7 +28,7 @@ for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener('click', () => {
     const quantityInput = document.getElementById('quantityInput');
     const quantity = parseInt(quantityInput.value, 10);
-    cartNumbers(quantity);
+    cartNumbers(quantity, products[i]);
   });
 }
 
