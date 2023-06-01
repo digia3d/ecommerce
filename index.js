@@ -1,5 +1,32 @@
 /* eslint-disable no-plusplus */
 
+let products = [
+  {
+    name: "Men's T Shirt",
+    tag: "menstshirt",
+    price: 72,
+    inCart: 0,
+  },
+  {
+    name: "Men's T Shirt",
+    tag: "menstshirt",
+    price: 72,
+    inCart: 0,
+  },
+  {
+    name: "Men's T Shirt",
+    tag: "menstshirt",
+    price: 72,
+    inCart: 0,
+  },
+  {
+    name: "Men's T Shirt",
+    tag: "menstshirt",
+    price: 72,
+    inCart: 0,
+  }
+];
+
 function onLoadCartNumbers() {
   const productNumbers = localStorage.getItem('cartNumbers');
   if (productNumbers) {
