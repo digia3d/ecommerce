@@ -9,8 +9,9 @@ function onLoadCartNumbers() {
   }
 }
 
-function cartNumbers(quantity, product) {
-  console.log('The product clicked is', product);
+function cartNumbers(quantity, products) {
+  console.log('Quantity:', quantity);
+  console.log('Product:', products);
   let productNumbers = localStorage.getItem('cartNumbers');
   productNumbers = parseInt(productNumbers, 10);
 
@@ -21,16 +22,21 @@ function cartNumbers(quantity, product) {
     localStorage.setItem('cartNumbers', quantity);
     document.querySelector('.cart span').textContent = quantity;
   }
+  localStorage.setItem(products.tag, JSON.stringify(products));
 }
 
 const carts = document.querySelectorAll('.add-cart');
 for (let i = 0; i < carts.length; i++) {
-  carts[i].addEventListener('click', () => {
+  carts[i].addEventListener('click', (event) => {
+    const button = event.target;
+    const productId = button.dataset.productId;
+    const product = products.find((p) => p.tag === productId);
     const quantityInput = document.getElementById('quantityInput');
     const quantity = parseInt(quantityInput.value, 10);
-    cartNumbers(quantity, products[i]);
+    cartNumbers(quantity, product);
   });
 }
+
 
 onLoadCartNumbers();
 

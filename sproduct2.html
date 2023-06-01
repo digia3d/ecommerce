@@ -108,7 +108,7 @@
                <option>42</option>
             </select>
             <input id="quantityInput" type="number" value="1" />
-            <button class="buy-btn add-cart">Add To Cart</button>
+            <button class="add-cart" data-product-id="runningshoes">Add to Cart</button>
             <h4 class="mt-5 mb-5">Product Details</h4>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
                voluptate odit, aliquid pariatur est, ad veniam similique fugiat
@@ -259,23 +259,6 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"></script>
 
-   <script>
-      var MainImg = document.getElementById("MainImg");
-      var smallimg = document.getElementsByClassName("small-img");
-
-      smallimg[0].onclick = function () {
-         MainImg.src = smallimg[0].src;
-      };
-      smallimg[1].onclick = function () {
-         MainImg.src = smallimg[1].src;
-      };
-      smallimg[2].onclick = function () {
-         MainImg.src = smallimg[2].src;
-      };
-      smallimg[3].onclick = function () {
-         MainImg.src = smallimg[3].src;
-      };
-   </script>
 </body>
 
 </html>
