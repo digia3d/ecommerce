@@ -3,28 +3,28 @@
 let products = [
   {
     name: "Men's T Shirt",
-    tag: "menstshirt",
+    tag: 'menstshirt',
     price: 72,
     inCart: 0,
   },
   {
     name: "Men's T Shirt",
-    tag: "menstshirt",
+    tag: 'menstshirt',
     price: 72,
     inCart: 0,
   },
   {
     name: "Men's T Shirt",
-    tag: "menstshirt",
+    tag: 'menstshirt',
     price: 72,
     inCart: 0,
   },
   {
     name: "Men's T Shirt",
-    tag: "menstshirt",
+    tag: 'menstshirt',
     price: 72,
     inCart: 0,
-  }
+  },
 ];
 
 function onLoadCartNumbers() {
