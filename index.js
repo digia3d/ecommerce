@@ -7,23 +7,25 @@ function onLoadCartNumbers() {
   }
 }
 
-function cartNumbers() {
+function cartNumbers(quantity) {
   let productNumbers = localStorage.getItem('cartNumbers');
   productNumbers = parseInt(productNumbers, 10);
 
   if (productNumbers) {
-    localStorage.setItem('cartNumbers', (productNumbers += 1));
-    document.querySelector('.cart span').textContent = productNumbers + 1;
+    localStorage.setItem('cartNumbers', productNumbers + quantity);
+    document.querySelector('.cart span').textContent = productNumbers + quantity;
   } else {
-    localStorage.setItem('cartNumbers', 1);
-    document.querySelector('.cart span').textContent = 1;
+    localStorage.setItem('cartNumbers', quantity);
+    document.querySelector('.cart span').textContent = quantity;
   }
 }
 
 const carts = document.querySelectorAll('.add-cart');
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener('click', () => {
-    cartNumbers();
+    const quantityInput = document.getElementById('quantityInput');
+    const quantity = parseInt(quantityInput.value, 10);
+    cartNumbers(quantity);
   });
 }
 
