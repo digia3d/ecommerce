@@ -48,7 +48,7 @@
       }
    </style>
 
-   <script src="index.js" async></script>
+   <script type="module" src="index.js" async></script>
 </head>
 
 <body>
@@ -100,15 +100,15 @@
             <h6>Home / Running shoes</h6>
             <h3 class="py-4">Running shoes</h3>
             <h2>$127.00</h2>
-            <select class="my-3">
+            <select id="sizeSelect" class="my-3">
                <option>Select Size</option>
                <option>39</option>
                <option>40</option>
                <option>41</option>
                <option>42</option>
             </select>
-            <input type="number" value="1" />
-            <button class="buy-btn add-cart">Add To Cart</button>
+            <input id="quantityInput" type="number" value="1" />
+            <button class="add-cart" data-product-id="runningshoes">Add to Cart</button>
             <h4 class="mt-5 mb-5">Product Details</h4>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
                voluptate odit, aliquid pariatur est, ad veniam similique fugiat
@@ -259,23 +259,6 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"></script>
 
-   <script>
-      var MainImg = document.getElementById("MainImg");
-      var smallimg = document.getElementsByClassName("small-img");
-
-      smallimg[0].onclick = function () {
-         MainImg.src = smallimg[0].src;
-      };
-      smallimg[1].onclick = function () {
-         MainImg.src = smallimg[1].src;
-      };
-      smallimg[2].onclick = function () {
-         MainImg.src = smallimg[2].src;
-      };
-      smallimg[3].onclick = function () {
-         MainImg.src = smallimg[3].src;
-      };
-   </script>
 </body>
 
 </html>
