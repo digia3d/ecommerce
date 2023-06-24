@@ -32,7 +32,7 @@ for (let i = 0; i < carts.length; i++) {
     const quantityInput = document.getElementById('quantityInput');
     const quantity = parseInt(quantityInput.value, 10);
     cartNumbers(quantity, product);
-    totalCost(product)
+    // totalCost(product);
   });
 }
 
@@ -83,6 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function totalCost(product) {
-console.log("The product price is", product.price);
-}
+// function totalCost(product) {
+// console.log('The product price is', product.price);
+// }
