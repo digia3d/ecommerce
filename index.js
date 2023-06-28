@@ -32,7 +32,7 @@ for (let i = 0; i < carts.length; i++) {
     const quantityInput = document.getElementById('quantityInput');
     const quantity = parseInt(quantityInput.value, 10);
     cartNumbers(quantity, product);
-    // totalCost(product);
+    totalCost(product);
   });
 }
 
@@ -83,6 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// function totalCost(product) {
-// console.log('The product price is', product.price);
-// }
+function totalCost(product) {
+  let cartCost = localStorage.getItem('totalCost');
+  cartCost = cartCost ? parseInt(cartCost, 10) : 0; // Parse cartCost to integer or set to 0 if it doesn't exist
+  cartCost += product.price; // Add the current product's price to the cartCost
+  console.log('The cart cost is', cartCost);
+  localStorage.setItem('totalCost', cartCost); // Update the cartCost in the localStorage
+}
